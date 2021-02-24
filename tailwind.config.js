@@ -2,6 +2,13 @@ module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      xs: '375px',
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {},
     container: {
       display: 'flex',
@@ -15,4 +22,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
