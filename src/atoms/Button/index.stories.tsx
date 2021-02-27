@@ -5,6 +5,7 @@ import { Button } from './';
 export default {
   title: 'Button',
   component: Button,
+  argTypes: { onClick: { action: 'clicked' } },
 };
 
 const Template: Story<ComponentProps<typeof Button>> = (args) => (
