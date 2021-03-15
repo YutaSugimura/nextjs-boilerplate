@@ -1,9 +1,26 @@
 import Head from 'next/head';
+import type { GetServerSideProps } from 'next';
 import styles from '../styles/Home.module.css';
+import { Card } from '../src/components/molecules/Card';
 
-type Props = {};
+type Props = {
+  data: {
+    title: string;
+    text: string;
+  };
+};
 
-const Page: React.VFC<Props> = () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const data = await fetch('https://myapi.dev/ssr').then((res) => res.json());
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const Page: React.VFC<Props> = ({ data }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -50,6 +67,13 @@ const Page: React.VFC<Props> = () => {
             </p>
           </a>
         </div>
+
+        <div>
+          <p>title: {data.title}</p>
+          <p>text: {data.text}</p>
+        </div>
+
+        <Card />
       </main>
 
       <footer className={styles.footer}>

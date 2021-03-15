@@ -23,6 +23,7 @@
     "postcss": "^7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "swr": "^0.5.3",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
@@ -58,5 +59,8 @@
       "eslint --quiet --fix",
       "yarn check-types"
     ]
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
