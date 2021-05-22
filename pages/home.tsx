@@ -1,5 +1,5 @@
-import Head from 'next/head';
 // import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import Head from 'next/head';
 
 type Props = {};
 

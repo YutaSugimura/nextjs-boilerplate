@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import type { GetServerSideProps } from 'next';
+import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { Card } from '../src/components/molecules/Card';
+import { Card } from '../src/components/molecules/card';
 
 type Props = {
   data: {

@@ -1,9 +1,9 @@
-import React, { ComponentProps } from 'react';
+import { ComponentProps } from 'react';
 import { Story } from '@storybook/react';
-import { Button } from './';
+import { Button } from '.';
 
 export default {
-  title: 'Button',
+  title: 'Button/index',
   component: Button,
   argTypes: { onClick: { action: 'clicked' } },
 };
