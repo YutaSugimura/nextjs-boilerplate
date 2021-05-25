@@ -3,4 +3,4 @@
 
 yarn type-check
 yarn test
-yarn lint:fix
+yarn format:fix
