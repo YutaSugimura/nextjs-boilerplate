@@ -2,14 +2,12 @@
   "env": {
     "es6": true,
     "node": true,
-    "browser": true,
-    "commonjs": true
+    "browser": true
   },
   "parser": "@typescript-eslint/parser",
-
   "parserOptions": {
     "project": "./tsconfig.json",
-    "ecmaVersion": 2020,
+    "ecmaVersion": 2021,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -22,19 +20,21 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "prettier",
-    "prettier/react",
+    "plugin:prettier/recommended",
     "prettier/@typescript-eslint"
   ],
   "rules": {
     "no-console": "warn",
     "no-shadow": "error",
-    "react/prop-types": "off",
     "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/ban-types": "warn",
     "@typescript-eslint/no-empty-interface": "error",
-    "@typescript-eslint/no-var-requires": "error"
+    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/no-unused-vars": "error"
   }
 }

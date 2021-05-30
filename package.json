@@ -2,6 +2,7 @@
   "name": "template",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,9 +12,9 @@
     "test": "jest",
     "test-all": "yarn type-check && yarn test",
     "lint": "eslint './src/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint --quiet --fix './src/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
     "format": "prettier --check ./src",
-    "format:fix": "prettier --write ./src",
+    "format:fix": "prettier --write './src/**/*.{js,jsx,ts,tsx}",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install"
@@ -59,5 +60,10 @@
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ]
   }
 }
