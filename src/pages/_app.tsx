@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
-  require('../.mocks');
+  require('../../.mocks');
 }
 
 const App = ({ Component, pageProps }: AppProps) => {
