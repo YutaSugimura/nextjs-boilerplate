@@ -1,12 +1,22 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import '../styles/globals.css';
+
+export const MyStory = () => <div />;
+MyStory.parameters = {
+  viewport: {
+    defaultViewport: 'iphonex',
+  },
+};
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  viewport: {
-    viewports: {
-      ...INITIAL_VIEWPORTS,
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
     },
-    defaultViewport: 'iphonex',
+  },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+    defaultViewport: 'iphone6',
   },
 };
