@@ -11,6 +11,17 @@ type Props = {
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  if (process.env.NODE_ENV !== 'development') {
+    return {
+      props: {
+        data: {
+          title: '',
+          text: '',
+        },
+      },
+    };
+  }
+
   const data = await fetch('https://myapi.dev/ssr').then((res) => res.json());
 
   return {
