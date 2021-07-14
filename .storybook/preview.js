@@ -1,4 +1,5 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import '../src/styles/globals.css';
 
 export const MyStory = () => <div />;
 MyStory.parameters = {
