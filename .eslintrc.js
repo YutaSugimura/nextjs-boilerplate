@@ -14,6 +14,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
+  plugins: ["react-hooks", "react", "@typescript-eslint"],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -23,7 +24,6 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     indent: ['error', 2],
@@ -36,5 +36,9 @@ module.exports = {
     '@next/next/no-img-element': ['warn'],
     '@typescript-eslint/no-unsafe-assignment': ['warn'],
     '@typescript-eslint/ban-types': ['warn'],
+    '@typescript-eslint/no-explicit-any': ['warn'],
+    '@typescript-eslint/no-empty-interface': ['error'],
+    '@typescript-eslint/no-var-requires': ['error'],
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
 };
