@@ -1,12 +1,13 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import * as NextImage from 'next/image';
 import '../src/styles/globals.css';
 
-export const MyStory = () => <div />;
-MyStory.parameters = {
-  viewport: {
-    defaultViewport: 'iphonex',
-  },
-};
+// next/image
+const OriginalNextImage = NextImage.default;
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  value: (props) => <OriginalNextImage {...props} unoptimized />,
+});
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -18,6 +19,15 @@ export const parameters = {
   },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
-    defaultViewport: 'iphone6',
+    defaultViewport: 'iphonex',
+  },
+  backgrounds: {
+    default: 'white',
+    values: [
+      {
+        name: 'white',
+        value: '#fff',
+      },
+    ],
   },
 };

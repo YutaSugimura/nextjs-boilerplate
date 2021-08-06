@@ -13,7 +13,9 @@ module.exports = {
       justifyContent: 'center',
       alignItems: 'center',
     },
-    fontFamily: {},
+    fontFamily: {
+      sans: ['Roboto', 'Noto Sans JP', 'sans-serif'],
+    },
   },
   variants: {
     extend: {},
