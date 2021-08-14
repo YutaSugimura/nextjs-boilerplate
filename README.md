@@ -2,6 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+# Execution Environment
+
+- yarn v3.0.0
+- node 14.15.4
+
 First, run the development server:
 
 ```bash
