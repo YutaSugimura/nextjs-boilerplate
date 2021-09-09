@@ -1,37 +1,9 @@
-import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { Card } from '../components/molecules/card';
 
-type Props = {
-  data: {
-    title: string;
-    text: string;
-  };
-};
+type Props = {};
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  if (process.env.NODE_ENV !== 'development') {
-    return {
-      props: {
-        data: {
-          title: '',
-          text: '',
-        },
-      },
-    };
-  }
-
-  const data = await fetch('https://myapi.dev/ssr').then((res) => res.json());
-
-  return {
-    props: {
-      data,
-    },
-  };
-};
-
-const Page: React.VFC<Props> = ({ data }) => {
+const Page: React.VFC<Props> = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -72,13 +44,6 @@ const Page: React.VFC<Props> = ({ data }) => {
             <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
           </a>
         </div>
-
-        <div>
-          <p>title: {data.title}</p>
-          <p>text: {data.text}</p>
-        </div>
-
-        <Card />
       </main>
 
       <footer className={styles.footer}>
