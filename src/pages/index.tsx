@@ -1,9 +1,8 @@
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import styles from '../styles/Home.module.css';
 
-type Props = {};
-
-const Page: React.VFC<Props> = () => {
+const Page: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
