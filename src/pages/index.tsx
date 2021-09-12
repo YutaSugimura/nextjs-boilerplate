@@ -7,7 +7,6 @@ const Page: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="2xl:container">
