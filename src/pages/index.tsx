@@ -7,6 +7,24 @@ const Page: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
+        <meta name="description" content="Nextjs Top Page" />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="http://localhost:3000/" />
+        <link rel="apple-touch-icon" href="webclip.png" />
+
+        {/* <meta property="og:admins" content="（FB_ID）" /> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Create Next App" />
+        <meta property="og:site_name" content="Create Next App" />
+        <meta property="og:description" content="Nextjs Top Page" />
+        <meta property="og:url" content="http://localhost:3000/" />
+        <meta
+          property="og:image"
+          content="https://camo.githubusercontent.com/92ec9eb7eeab7db4f5919e3205918918c42e6772562afb4112a2909c1aaaa875/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313630373535343338352f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6c6f676f2e706e67"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@Tweeter_id" />
       </Head>
 
       <main className="2xl:container">
