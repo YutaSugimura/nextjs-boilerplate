@@ -4,7 +4,7 @@ import { useCounter } from './useCounter';
 describe('useCounter', () => {
   it('return the default value', () => {
     const { result } = renderHook(() => useCounter());
-    expect(result.current.counter).toEqual(0);
+    expect(result.current.counter).toBe(0);
   });
 
   it('increment', () => {
@@ -14,7 +14,7 @@ describe('useCounter', () => {
       result.current.increment();
     });
 
-    expect(result.current.counter).toEqual(1);
+    expect(result.current.counter).toBe(1);
   });
 
   it('decrement', () => {
@@ -24,7 +24,7 @@ describe('useCounter', () => {
       result.current.decrement();
     });
 
-    expect(result.current.counter).toEqual(-1);
+    expect(result.current.counter).toBe(-1);
   });
 
   it('reset', () => {
@@ -34,12 +34,12 @@ describe('useCounter', () => {
       result.current.increment();
     });
 
-    expect(result.current.counter).toEqual(1);
+    expect(result.current.counter).toBe(1);
 
     act(() => {
       result.current.reset();
     });
 
-    expect(result.current.counter).toEqual(0);
+    expect(result.current.counter).toBe(0);
   });
 });
