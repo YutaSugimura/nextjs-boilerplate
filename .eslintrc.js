@@ -1,29 +1,8 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'next',
     'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
-  plugins: ["react-hooks", "react", "@typescript-eslint"],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: 'module',
-    project: './tsconfig.json',
-  },
   rules: {
     'linebreak-style': ['error', 'unix'],
     indent: ['error', 2],
@@ -31,14 +10,5 @@ module.exports = {
     semi: ['error', 'always'],
     'no-console': ['warn'],
     'no-shadow': ['error'],
-    'react/react-in-jsx-scope': ['off'],
-    'react/prop-types': ['off'],
-    '@next/next/no-img-element': ['warn'],
-    '@typescript-eslint/no-unsafe-assignment': ['warn'],
-    '@typescript-eslint/ban-types': ['warn'],
-    '@typescript-eslint/no-explicit-any': ['warn'],
-    '@typescript-eslint/no-empty-interface': ['error'],
-    '@typescript-eslint/no-var-requires': ['error'],
-    '@typescript-eslint/no-unused-vars': ['error'],
   },
 };

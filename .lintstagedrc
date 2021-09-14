@@ -1,6 +1,5 @@
 {
   "**/*.{ts,tsx}": [
-    "yarn eslint",
-    "yarn prettier --check"
+    "yarn format",
   ]
 }
