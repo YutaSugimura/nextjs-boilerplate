@@ -23,7 +23,7 @@
     "postcss": "^8.3.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "swr": "^1.0.0",
+    "swr": "^1.0.1",
     "tailwindcss": "^2.2.15"
   },
   "devDependencies": {
@@ -51,7 +51,8 @@
     "msw": "^0.35.0",
     "prettier": "^2.3.2",
     "react-test-renderer": "^17.0.2",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "whatwg-fetch": "^3.6.2"
   },
   "msw": {
     "workerDirectory": "public"
