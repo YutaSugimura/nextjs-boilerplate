@@ -1,19 +1,18 @@
 import { rest } from 'msw';
 
 export const handlers = [
-  rest.get('https://myapi.dev/ssr', (_, res, ctx) => {
+  rest.get('https://api.app/message', (_, res, ctx) => {
     return res(
+      ctx.delay(100),
       ctx.json({
-        title: 'SSR Source',
-        text: 'text text text',
+        message: 'Hello World',
       }),
     );
   }),
-  rest.get('https://myapi.dev/csr', (_, res, ctx) => {
+  rest.get('/api/hello', (_, res, ctx) => {
     return res(
       ctx.json({
-        title: 'CSR Source',
-        text: 'text text text',
+        message: 'Hello World',
       }),
     );
   }),
