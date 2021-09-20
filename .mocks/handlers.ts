@@ -5,7 +5,8 @@ export const handlers = [
     return res(
       ctx.delay(100),
       ctx.json({
-        message: 'Hello World',
+        title: 'The financial crisis',
+        body: 'Unemployment rates in the major advanced economies are at levels substantially higher than those prior to the Lehman shock.',
       }),
     );
   }),

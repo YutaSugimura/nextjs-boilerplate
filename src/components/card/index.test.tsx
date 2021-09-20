@@ -20,7 +20,13 @@ describe('Card Component', () => {
       </SWRConfig>,
     );
 
-    expect(await screen.findByText('Hello World')).toBeInTheDocument();
+    await waitFor(() => screen.getByRole('card-title'));
+    expect(screen.getByRole('card-title')).toHaveTextContent('The financial crisis');
+
+    await waitFor(() => screen.getByRole('card-body'));
+    expect(screen.getByRole('card-body')).toHaveTextContent(
+      'Unemployment rates in the major advanced economies are at levels substantially higher than those prior to the Lehman shock.',
+    );
     // screen.debug();
   });
 

@@ -1,15 +1,14 @@
 import { ComponentProps } from 'react';
-import { Story } from '@storybook/react';
+import { Story, Meta } from '@storybook/react';
 import { Card } from '.';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: 'Card/default',
-  argTypes: { onClick: { action: 'clicked' } },
-};
+  title: 'Card/index',
+} as Meta;
 
 const Template: Story<ComponentProps<typeof Card>> = (args) => <Card {...args} />;
-Template.storyName = 'Card/default';
+Template.storyName = 'Card/index';
 
-export const Component = Template.bind({});
-Component.args = {};
+export const index = Template.bind({});
+index.args = {};
