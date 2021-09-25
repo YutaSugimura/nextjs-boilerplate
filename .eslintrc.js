@@ -4,8 +4,6 @@ module.exports = {
     'prettier',
   ],
   rules: {
-    'linebreak-style': ['error', 'unix'],
-    indent: ['error', 2],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'no-console': ['warn'],
