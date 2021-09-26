@@ -33,12 +33,7 @@ describe('Card Component', () => {
   it('Should render Error text when fetch failed', async () => {
     server.use(
       rest.get('https://api.app/message', (_, res, ctx) => {
-        return res(
-          ctx.status(500),
-          // ctx.json({
-          //   message: 'Bad Request',
-          // }),
-        );
+        return res(ctx.status(500));
       }),
     );
 

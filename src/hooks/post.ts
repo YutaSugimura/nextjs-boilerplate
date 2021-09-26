@@ -12,6 +12,6 @@ export const usePostData = (id: number | string, fallbackData?: FetchPost) => {
     isLoading: !data && !error,
     isError: error ? true : false,
     data: data?.data,
-    refetch: mutate,
+    mutate,
   };
 };
