@@ -1,8 +1,12 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
+
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  env: {
-    NEXT_PUBLIC_API_MOCKING: process.env.NODE_ENV === 'development' ? 'enabled' : 'disabled',
-  },
 };
+
+module.exports = nextConfig;
