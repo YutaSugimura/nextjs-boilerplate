@@ -1,9 +1,9 @@
-import * as NextImage from 'next/image';
-import { addDecorator } from '@storybook/react';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { initializeWorker, mswDecorator } from 'msw-storybook-addon';
-import '../src/styles/globals.css';
-import { handlers } from '../.mocks/handlers';
+import * as NextImage from "next/image";
+import { addDecorator } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { initializeWorker, mswDecorator } from "msw-storybook-addon";
+import "../src/styles/globals.css";
+import { handlers } from "../.mocks/handlers";
 
 // msw
 initializeWorker();
@@ -11,14 +11,13 @@ addDecorator(mswDecorator);
 
 // next/image
 const OriginalNextImage = NextImage.default;
-Object.defineProperty(NextImage, 'default', {
+Object.defineProperty(NextImage, "default", {
   configurable: true,
   value: (props) => <OriginalNextImage {...props} unoptimized />,
 });
 
-// Parameters
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -27,14 +26,14 @@ export const parameters = {
   },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
-    defaultViewport: 'iphonex',
+    defaultViewport: "iphonex",
   },
   backgrounds: {
-    default: 'white',
+    default: "white",
     values: [
       {
-        name: 'white',
-        value: '#fff',
+        name: "white",
+        value: "#fff",
       },
     ],
   },

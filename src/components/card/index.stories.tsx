@@ -1,14 +1,15 @@
-import { ComponentProps } from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Card } from '.';
+import { ComponentProps } from "react";
+import { Story, Meta } from "@storybook/react";
+import { Card } from ".";
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: 'Card/index',
+  title: "Card/index",
 } as Meta;
 
-const Template: Story<ComponentProps<typeof Card>> = (args) => <Card {...args} />;
-Template.storyName = 'Card/index';
+const Template: Story<ComponentProps<typeof Card>> = (args) => (
+  <Card {...args} />
+);
+Template.storyName = "Card/index";
 
-export const index = Template.bind({});
-index.args = {};
+export const Index = Template.bind({});
+Index.args = {};

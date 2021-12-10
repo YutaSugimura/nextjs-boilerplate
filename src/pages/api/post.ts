@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export type FetchPost = {
   message: string;
@@ -13,10 +13,10 @@ const api = (req: NextApiRequest, res: NextApiResponse): void => {
 
   res.statusCode = 200;
   res.json({
-    message: 'ok',
+    message: "ok",
     data: {
       id: id,
-      title: 'Financial Crisis',
+      title: "Financial Crisis",
       body: `
         The financial crisis of 2007–2008, also known as the global financial crisis (GFC), was a severe worldwide economic crisis. Prior to the COVID-19 recession in 2020, it was considered by many economists to have been the most serious financial crisis since the Great Depression. Predatory lending targeting low-income homebuyers, excessive risk-taking by global financial institutions, and the bursting of the United States housing bubble culminated in a "perfect storm". Mortgage-backed securities (MBS) tied to American real estate, as well as a vast web of derivatives linked to those MBS, collapsed in value. Financial institutions worldwide suffered severe damage, reaching a climax with the bankruptcy of Lehman Brothers on September 15, 2008 and a subsequent international banking crisis.
         The preconditions for the financial crisis were complex and multi-causal. Almost two decades prior, the U.S. Congress had passed legislation encouraging financing for affordable housing. In 1999, the Glass-Steagall legislation was repealed, permitting financial institutions to cross-pollinate their commercial (risk-averse) and proprietary trading (risk-seeking) operations. Arguably the largest contributor to the conditions necessary for financial collapse was the rapid development in predatory financial products which targeted low-income, low-information homebuyers who largely belonged to racial minorities. This market development went unattended by regulators and thus caught the U.S. government by surprise.

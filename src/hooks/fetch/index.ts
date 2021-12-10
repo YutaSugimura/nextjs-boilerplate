@@ -1,9 +1,9 @@
-import useSWR from 'swr';
+import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export const useFetch = () => {
-  const { data, error, mutate } = useSWR('/api/hello', fetcher);
+  const { data, error, mutate } = useSWR("/api/hello", fetcher);
 
   return {
     data,

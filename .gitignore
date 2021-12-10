@@ -7,8 +7,6 @@
 
 # testing
 /coverage
-cypress/screenshots
-cypress/videos
 
 # next.js
 /.next/
@@ -37,8 +35,8 @@ yarn-error.log*
 # vercel
 .vercel
 
+# typescript
+*.tsbuildinfo
+
 # storybook
 /storybook-static
-
-# typescript
-tsconfig.tsbuildinfo

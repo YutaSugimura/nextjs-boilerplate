@@ -1,6 +1,6 @@
-import type { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
 
 export const getStaticProps: GetStaticProps = () => {
   return {
@@ -70,11 +70,14 @@ const Page: NextPage = () => {
           </section>
 
           <section className="w-full pt-2">
-            <h2 className="text-black text-xl font-bold">Client Data Fetching</h2>
+            <h2 className="text-black text-xl font-bold">
+              Client Data Fetching
+            </h2>
             <p>
-              The name “SWR” is derived from stale-while-revalidate, a HTTP cache invalidation
-              strategy popularized by HTTP RFC 5861. SWR is a strategy to first return the data from
-              cache (stale), then send the fetch request (revalidate), and finally come with the
+              The name “SWR” is derived from stale-while-revalidate, a HTTP
+              cache invalidation strategy popularized by HTTP RFC 5861. SWR is a
+              strategy to first return the data from cache (stale), then send
+              the fetch request (revalidate), and finally come with the
               up-to-date data.
             </p>
 
@@ -140,7 +143,9 @@ const Page: NextPage = () => {
 
         <div className="pt-10">
           <Link href="/">
-            <a className="text-sm text-blue-500 hover:text-gray-400">top page</a>
+            <a className="text-sm text-blue-500 hover:text-gray-400">
+              top page
+            </a>
           </Link>
         </div>
       </main>

@@ -1,4 +1,4 @@
-import useSWR from 'swr';
+import useSWR from "swr";
 
 type Props = {};
 
@@ -10,7 +10,10 @@ type Result = {
 };
 
 export const Card: React.VFC<Props> = () => {
-  const { data, error } = useSWR<Result>('https://api.app/message', fetcher);
+  const { data, error } = useSWR<Result>(
+    process.env.NEXT_PUBLIC_API_URL + "/message",
+    fetcher
+  );
 
   if (error) {
     return (
@@ -22,6 +25,7 @@ export const Card: React.VFC<Props> = () => {
     );
   }
 
+  // empty
   if (!data) {
     return (
       <div className="flex flex-col justify-center items-center w-80 p-3 border border-gray-400 rounded-lg animate-pulse">
