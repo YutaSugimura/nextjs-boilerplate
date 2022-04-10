@@ -4,19 +4,19 @@ import type {
   InferGetStaticPropsType,
   // GetStaticProps,
   NextPage,
-} from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { usePostData } from '../../hooks/post';
-import type { FetchPost } from '../api/post';
+} from "next";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { usePostData } from "../../hooks/post";
+import type { FetchPost } from "../api/post";
 
 type Props = InferGetStaticPropsType<typeof getServerSideProps>;
 
 const Page: NextPage<Props> = ({ fallbackData }) => {
   const router = useRouter();
   const { id } = router.query;
-  const _id = !id ? '0' : Array.isArray(id) ? id[0] : id;
+  const _id = !id ? "0" : Array.isArray(id) ? id[0] : id;
   const { isLoading, isError, data } = usePostData(_id, fallbackData);
 
   if (isLoading) {
@@ -96,8 +96,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
 
-  const basePath = url.replace(path, '');
-  const data: FetchPost = await fetch(`${basePath}/api/post?id=${id}`).then((res) => res.json());
+  const basePath = url.replace(path, "");
+  const data: FetchPost = await fetch(`${basePath}/api/post?id=${id}`).then(
+    (res) => res.json()
+  );
 
   return {
     props: {

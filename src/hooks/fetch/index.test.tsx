@@ -26,6 +26,7 @@ describe("useFetch()", () => {
 
   it("Should render CSF data after pre-rendered data", async () => {
     const wrapper = ({ children }: { children: React.ReactChild }) => (
+      // @ts-ignore eslint-disable-next-line
       <SWRConfig value={{ provider: () => new Map(), dedupingInterval: 0 }}>
         {children}
       </SWRConfig>
@@ -49,6 +50,7 @@ describe("useFetch()", () => {
     );
 
     const wrapper = ({ children }: { children: React.ReactChild }) => (
+      // @ts-ignore eslint-disable-next-line
       <SWRConfig value={{ provider: () => new Map(), dedupingInterval: 0 }}>
         {children}
       </SWRConfig>

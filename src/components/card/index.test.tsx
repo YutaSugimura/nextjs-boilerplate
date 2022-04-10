@@ -18,6 +18,7 @@ afterAll(() => server.close());
 describe("Card Component", () => {
   it("Should render CSF data after pre-rendered data", async () => {
     render(
+      // @ts-ignore eslint-disable-next-line
       <SWRConfig value={{ provider: () => new Map(), dedupingInterval: 0 }}>
         <Card />
       </SWRConfig>
@@ -42,6 +43,7 @@ describe("Card Component", () => {
     );
 
     render(
+      // @ts-ignore eslint-disable-next-line
       <SWRConfig value={{ provider: () => new Map(), dedupingInterval: 0 }}>
         <Card />
       </SWRConfig>
